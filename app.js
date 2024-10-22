@@ -496,7 +496,7 @@ document
 document
   .getElementById("status")
   .addEventListener("click", () => showFilterModal("status"));
-
+let cancel = document.getElementById("cance");
 // Function to render the table
 function renderTable(data, page) {
   const tableBody = document.querySelector("#eventsTable tbody");
@@ -524,12 +524,12 @@ function renderTable(data, page) {
     }`;
     tableBody.appendChild(row);
 
-    row.addEventListener("mouseover", (e) => {
+    row.addEventListener("click", (e) => {
       const rect = row.getBoundingClientRect();
       showModal(event, rect);
     });
 
-    row.addEventListener("mouseout", hideModal);
+    cancel.addEventListener("click", hideModal);
   });
 
   const statusCells = document.querySelectorAll(".status");
@@ -555,6 +555,7 @@ function renderMiniTable(data, page) {
     // Create table rows for event name and status
     const row = document.createElement("tr");
     row.classList.add("rowww_container");
+    row.style.cursor = "pointer";
 
     row.innerHTML = `
       <td>
@@ -598,26 +599,26 @@ function renderMiniTable(data, page) {
 
       if (innerDiv.classList.contains("hidden_2")) {
         innerDiv.classList.remove("hidden_2"); // Show the content
-        // detailsRow.classList.remove("row_container");
-        row.style.background = "#F2F2F7";
-        detailsRow.style.background = "#F2F2F7";
+        row.classList.add("expanded");
+        detailsRow.classList.add("expanded");
+
         chevronIcon.classList.remove("bi-chevron-right"); // Change to chevron-down
         chevronIcon.classList.add("bi-chevron-down");
       } else {
         innerDiv.classList.add("hidden_2"); // Hide the content
-        row.style.background = "";
+        row.classList.remove("expanded");
 
         chevronIcon.classList.remove("bi-chevron-down"); // Change back to chevron-right
         chevronIcon.classList.add("bi-chevron-right");
       }
     });
 
-    row.addEventListener("mouseover", (e) => {
+    row.addEventListener("click", (e) => {
       const rect = row.getBoundingClientRect();
       showModal(event, rect);
     });
 
-    row.addEventListener("mouseout", hideModal);
+    cancel.addEventListener("click", hideModal);
   });
 
   const statusCells = document.querySelectorAll(".status");

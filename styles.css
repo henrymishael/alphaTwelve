@@ -241,6 +241,81 @@ body.dark {
   background-color: #484554;
 }
 
+.main-content.dark .chart-container {
+  border: none;
+  background-color: #484554;
+  color: #fff;
+}
+
+.main-content.dark #chart {
+  color: #fff;
+}
+
+.main-content.dark .apexcharts-xaxis text,
+.main-content.dark .apexcharts-yaxis text {
+  fill: white; /* Change labels color to white */
+}
+
+.main-content.dark .apexcharts-tooltip {
+  background: #11142d;
+  color: white;
+}
+
+.main-content.dark .right_content span,
+.main-content.dark .input_holder span {
+  background: #484554;
+  border: none;
+}
+
+.main-content.dark td {
+  color: #fff;
+  background-color: #484554;
+}
+
+.main-content.dark th {
+  background-color: #6a6676;
+  color: #fff;
+}
+
+.main-content.dark .expanded {
+  background-color: #383544;
+}
+
+.main-content.dark .pagination button {
+  background-color: #484554;
+  border: none;
+  color: white;
+}
+
+.main-content.dark .pagination button:nth-child(2).active,
+.main-content.dark button:nth-child(3).active,
+.main-content.dark button:nth-child(4).active {
+  background-color: #8576ff;
+  color: white;
+
+  &:hover {
+    background-color: #ccc;
+  }
+}
+.main-content.dark .pagination button:not(.active) {
+  background-color: #484548;
+}
+
+.main-content.dark .pagination-container select {
+  background-color: #484548;
+  border: none;
+  color: white;
+
+  &:focus {
+    border: none;
+  }
+}
+
+.pagination button:first-child,
+.pagination button:last-child {
+  background: #484548;
+  border: none;
+}
 .sidebar .nav-lists1 .active {
   background-color: rgba(0, 0, 0, 0.1);
 }
@@ -728,7 +803,6 @@ tr {
 .pagination {
   display: flex;
   align-items: center;
-  margin-top: 10px;
   gap: 16px;
 }
 
@@ -836,11 +910,11 @@ button:nth-child(4).active {
   transition: all 200ms ease;
 }
 
-.event-row:hover #modalEvent,
+/* .event-row:hover #modalEvent,
 #modalEvent:hover {
   display: flex;
   opacity: 1;
-}
+} */
 
 .modal_details {
   display: flex;
@@ -881,6 +955,10 @@ button:nth-child(4).active {
     font-size: 14px;
     line-height: 20px; /* 142.857% */
   }
+}
+
+.expanded {
+  background-color: #f2f2f7;
 }
 
 .avatar_container {
@@ -1033,14 +1111,14 @@ button:nth-child(4).active {
   #item {
     font-size: 10px;
     position: absolute;
-    left: 3px;
+    left: 10px;
     transform: translateY(30%);
     -webkit-text-stroke-width: 0.7px;
   }
 
   .rowww_container td {
     padding: 8px;
-    padding-left: 24px;
+    padding-left: 36px;
     /* background: #000; */
     width: 100%;
   }
@@ -1066,6 +1144,7 @@ button:nth-child(4).active {
     width: 100%;
     padding: 16px;
     padding-right: 36px;
+    padding-left: 28px;
     border-radius: 0%;
   }
 
@@ -1167,6 +1246,15 @@ button:nth-child(4).active {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+  }
+
+  #select-down {
+    position: absolute;
+
+    right: 32px;
+    z-index: 8;
+    font-size: 8px;
+    -webkit-text-stroke-width: 0.5px;
   }
 }
 
@@ -1468,16 +1556,11 @@ button:nth-child(4).active {
   }
 
   .chart-container {
-    /* min-width: 100%; */
-    /* padding: 12px; */
     border: 1px solid #f2f2f7;
-    /* height: 200px; */
-    /* height: 1000px; */
   }
 
   #chart {
     width: 150%;
-    /* height: 1000px; */
   }
 
   .sidebar.active #close {
@@ -1533,7 +1616,7 @@ button:nth-child(4).active {
   .rowww_container td {
     padding: 8px;
     padding-left: 24px;
-    /* background: #000; */
+
     width: 100%;
   }
 
@@ -1542,7 +1625,6 @@ button:nth-child(4).active {
   }
 
   .col_span {
-    /* background: #000; */
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -1660,6 +1742,16 @@ button:nth-child(4).active {
     justify-content: space-between;
     width: 100%;
   }
+
+  .pagination {
+    gap: 8px;
+  }
+
+  .pagination-container span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
 }
 
 @media (max-width: 360px) {
@@ -1676,5 +1768,15 @@ button:nth-child(4).active {
     th:first-child {
       width: 65%;
     }
+  }
+
+  .pagination {
+    gap: 8px;
+  }
+
+  .pagination-container span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 }
