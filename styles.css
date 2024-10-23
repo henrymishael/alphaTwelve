@@ -2,6 +2,8 @@
   --primary-color: #6c5dd3;
   --secondary-color: #a3a3a3;
   --background-color: #f7f6fb;
+  --background-darl-color: #383544;
+  --container-color: #484554;
   --hover-color: #fcf7ff;
   --text-color: #11142d;
   --completed-color: #10b981;
@@ -11,6 +13,10 @@
   --general-dark-background: #000000;
   --border-color: #eee;
   --logo-color: #93c5fd;
+  --logoText-color: #2563eb;
+  --shadow-color: #0000001a;
+  --button-active-color: #8576ff;
+  --button-inactive-color: #484548;
 }
 
 * {
@@ -105,7 +111,7 @@ a {
 
   .red {
     position: absolute;
-    background: #f43f5e;
+    background: var(--alert-color);
     width: 24px;
     height: 24px;
     right: 12px;
@@ -123,13 +129,13 @@ a {
 
 #active-nav {
   background: var(--hover-color);
-  color: #2563eb;
+  color: var(--logoText-color);
   border-radius: 8px;
 }
 
 .red-small {
   position: absolute;
-  background: #f43f5e;
+  background: var(--alert-color);
   width: 6px;
   height: 6px;
   border-radius: 100%;
@@ -177,7 +183,7 @@ a {
 }
 
 #close {
-  color: #a3a3a3;
+  color: var(--secondary-color);
   font-size: 28px;
 }
 
@@ -206,7 +212,7 @@ a {
 }
 
 #cance {
-  color: #a3a3a3;
+  color: var(--secondary-color);
   font-size: 28px;
 }
 
@@ -263,11 +269,11 @@ a {
 
 /* Dark theme */
 body.dark {
-  background-color: #383544;
+  background-color: var(--background-darl-color);
   color: var(--general-background);
 }
 .sidebar.dark {
-  background-color: #484554;
+  background-color: var(--container-color);
   color: var(--general-background);
 }
 
@@ -282,12 +288,12 @@ body.dark {
 
 .main-content.dark .cards {
   border: none;
-  background-color: #484554;
+  background-color: var(--container-color);
 }
 
 .main-content.dark .chart-container {
   border: none;
-  background-color: #484554;
+  background-color: var(--container-color);
   color: var(--general-background);
 }
 
@@ -307,7 +313,7 @@ body.dark {
 
 .main-content.dark .right_content span,
 .main-content.dark .input_holder span {
-  background: #484554;
+  background: var(--container-color);
   border: none;
 }
 
@@ -317,7 +323,7 @@ body.dark {
 
 .main-content.dark td {
   color: var(--general-background);
-  background-color: #484554;
+  background-color: var(--container-color);
 }
 
 .main-content.dark th {
@@ -326,11 +332,11 @@ body.dark {
 }
 
 .main-content.dark .expanded {
-  background-color: #383544;
+  background-color: var(--background-darl-color);
 }
 
 .main-content.dark .pagination button {
-  background-color: #484554;
+  background-color: var(--container-color);
   border: none;
   color: var(--general-background);
 }
@@ -338,7 +344,7 @@ body.dark {
 .main-content.dark .pagination button:nth-child(2).active,
 .main-content.dark button:nth-child(3).active,
 .main-content.dark button:nth-child(4).active {
-  background-color: #8576ff;
+  background-color: var(--button-active-color);
   color: var(--general-background);
 
   &:hover {
@@ -346,11 +352,11 @@ body.dark {
   }
 }
 .main-content.dark .pagination button:not(.active) {
-  background-color: #484548;
+  background-color: var(--button-inactive-color);
 }
 
 .main-content.dark .pagination-container select {
-  background-color: #484548;
+  background-color: var(--button-inactive-color);
   border: none;
   color: var(--general-background);
 
@@ -360,7 +366,7 @@ body.dark {
 }
 
 .main-content.dark #modalEvent {
-  background: #484554;
+  background: var(--container-color);
   box-shadow: 0px 16px 24px 0px rgba(0, 0, 0, 0.15);
   color: var(--general-background);
 }
@@ -396,7 +402,7 @@ body.dark {
 }
 
 .main-content.dark .bottomWrapper {
-  background-color: #484554;
+  background-color: var(--container-color);
 }
 .main-content.dark .bottomNav_link {
   iconify-icon {
@@ -434,11 +440,11 @@ body.dark {
 
 .pagination button:first-child,
 .pagination button:last-child {
-  background: #484548;
+  background: var(--button-inactive-color);
   border: none;
 }
 .sidebar .nav-lists1 .active {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--shadow-color);
 }
 
 .sidebar.dark #active-nav {
@@ -647,7 +653,7 @@ body.dark {
   width: 24px;
   color: var(--general-dark-background);
   cursor: pointer;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 8px var(--shadow-color);
   transition: background-color 0.3s ease;
 }
 
@@ -663,7 +669,7 @@ body.dark {
   display: flex;
   gap: 8px;
   justify-content: center;
-  z-index: 50;
+  z-index: 30;
 }
 
 .indicator {
@@ -889,7 +895,7 @@ tr {
 
 .modal-footer button {
   padding: 8px 12px;
-  background-color: #8576ff;
+  background-color: var(--button-active-color);
   color: var(--general-background);
   border: none;
   border-radius: 4px;
@@ -902,7 +908,7 @@ tr {
 }
 
 #closeFilter {
-  background: #f43f5e;
+  background: var(--alert-color);
 }
 
 #closeFilter:hover {
@@ -936,7 +942,7 @@ tr {
 .pagination button:nth-child(2).active,
 button:nth-child(3).active,
 button:nth-child(4).active {
-  background-color: #8576ff;
+  background-color: var(--button-active-color);
   color: var(--general-background);
 
   &:hover {
@@ -1118,12 +1124,12 @@ button:nth-child(4).active {
   }
 
   #delete {
-    background: #f43f5e;
+    background: var(--alert-color);
     color: var(--general-background);
   }
 
   #complete {
-    background-color: #8576ff;
+    background-color: var(--button-active-color);
     color: var(--general-background);
   }
 }
@@ -1696,7 +1702,7 @@ button:nth-child(4).active {
       background: var(--logo-color);
       font-size: 12px;
       font-weight: 500;
-      color: #2563eb;
+      color: var(--logoText-color);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1976,7 +1982,7 @@ button:nth-child(4).active {
   .bottomNav_link iconify-icon,
   .bottomNav_link i {
     font-size: 20px;
-    color: #484554;
+    color: var(--container-color);
   }
 
   .bottomNav_link:hover {
