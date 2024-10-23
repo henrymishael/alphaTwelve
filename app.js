@@ -459,17 +459,25 @@ function showModal(eventData, position) {
     "attendees"
   ).textContent = `${eventData.attendees} Attendees`;
 
-  const modalWidth = modal.offsetWidth;
-  const viewportWidth = window.innerWidth;
-  let top = position.top + 250;
-  let left = position.left + window.scrollX + 56;
+  //   const modalWidth = modal.offsetWidth;
+  //   const viewportWidth = window.innerWidth;
+  //   const viewportHeight = window.innerHeight; // Get the height of the viewport
+  //   let top = position.top + 250;
+  //   let left = position.left + window.scrollX + 56;
 
-  if (left + modalWidth > viewportWidth) {
-    left = viewportWidth - modalWidth;
-  }
+  //   // Adjust the position based on screen size
+  //   if (viewportWidth <= 900) {
+  //     // For smaller screens (e.g., tablets and mobile)
+  //     top = position.top + 900; // Adjust the top offset for smaller screens
+  //     left = 20; // Position the modal towards the center horizontally
+  //   } else {
+  //     if (left + modalWidth > viewportWidth) {
+  //       left = viewportWidth - modalWidth; // Ensure modal doesn't overflow on the right
+  //     }
+  //   }
 
-  modal.style.top = `${top}px`;
-  modal.style.left = `${left}px`;
+  //   modal.style.top = `${top}px`;
+  //   modal.style.left = `${left}px`;
   modal.classList.add("show");
 }
 
@@ -600,6 +608,7 @@ function renderMiniTable(data, page) {
       if (innerDiv.classList.contains("hidden_2")) {
         innerDiv.classList.remove("hidden_2"); // Show the content
         row.classList.add("expanded");
+        // row.addEventListener("click", showModal);
         detailsRow.classList.add("expanded");
 
         chevronIcon.classList.remove("bi-chevron-right"); // Change to chevron-down
@@ -607,7 +616,7 @@ function renderMiniTable(data, page) {
       } else {
         innerDiv.classList.add("hidden_2"); // Hide the content
         row.classList.remove("expanded");
-
+        // row.addEventListener("click", null);
         chevronIcon.classList.remove("bi-chevron-down"); // Change back to chevron-right
         chevronIcon.classList.add("bi-chevron-right");
       }

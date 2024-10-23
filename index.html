@@ -15,6 +15,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js"
@@ -30,37 +31,39 @@
         <div id="logo"></div>
         <div class="logo2">Full Logo</div>
         <!-- <i id="close" class="bi bi-x-lg"></i> -->
-        <img id="close" src="images/assets/close.png" alt="" />
+        <!-- <img id="close" src="images/assets/close.png" alt="" /> -->
+        <iconify-icon id="close" icon="solar:close-circle-bold"></iconify-icon>
       </div>
 
       <ul class="nav-lists1">
         <li id="active-nav">
           <a href="">
-            <i class="bi bi-house"></i>
+            <!-- <i class="bi bi-house"></i> -->
+            <iconify-icon icon="akar-icons:home-alt1"></iconify-icon>
             <span class="nav-item">Home</span>
           </a>
         </li>
         <li>
           <a href="">
-            <i class="bi bi-calendar4"></i>
+            <iconify-icon icon="solar:calendar-linear"></iconify-icon>
             <span class="nav-item">Events</span>
           </a>
         </li>
         <li>
           <a href="">
-            <i class="bi bi-megaphone"></i>
+            <iconify-icon icon="solar:user-speak-rounded-linear"></iconify-icon>
             <span class="nav-item">Speakers</span>
           </a>
         </li>
         <li>
           <a href="">
-            <i class="bi bi-file-text"></i>
+            <iconify-icon icon="solar:document-linear"></iconify-icon>
             <span class="nav-item">Reports</span>
           </a>
         </li>
         <li id="notifications">
           <a href="">
-            <i class="bi bi-bell"></i>
+            <iconify-icon icon="prime:bell"></iconify-icon>
             <span class="red-small"></span>
             <span class="nav-item">Notifications</span>
           </a>
@@ -68,17 +71,24 @@
         </li>
         <li>
           <a href="">
-            <i class="bi bi-chat"></i>
+            <iconify-icon icon="cuida:chatbubbles-outline"></iconify-icon>
             <span class="nav-item">Messages</span>
           </a>
         </li>
         <li>
-          <i class="bi bi-gear"></i>
+          <iconify-icon icon="fluent:settings-24-regular"></iconify-icon>
           <span class="nav-item">Settings</span>
         </li>
         <li id="btn">
-          <i id="left" class="bi bi-chevron-double-left"></i>
-          <i id="right" class="bi bi-chevron-double-right"></i>
+          <iconify-icon
+            id="right"
+            icon="stash:chevron-double-right-duotone"
+          ></iconify-icon>
+          <iconify-icon
+            id="left"
+            icon="stash:chevron-double-left-duotone"
+          ></iconify-icon>
+
           <span class="nav-item">Collapse</span>
         </li>
         <li id="theme-toggle">
@@ -99,7 +109,11 @@
       <div class="logo_wrapper">
         <div class="logo2">Full Logo</div>
         <span id="btn2">
-          <img id="open" src="images/assets/menu.png" alt="" />
+          <iconify-icon
+            id="open"
+            icon="solar:hamburger-menu-broken"
+          ></iconify-icon>
+          <!-- <img  src="images/assets/menu.png" alt="" /> -->
         </span>
       </div>
 
@@ -277,7 +291,11 @@
             <p id="event_date"></p>
           </span>
           <span>
-            <img id="cance" src="images/assets/close.png" alt="" />
+            <!-- <img  src="images/assets/close.png" alt="" /> -->
+            <iconify-icon
+              id="cance"
+              icon="solar:close-circle-bold"
+            ></iconify-icon>
           </span>
         </div>
         <div class="desc_container">
@@ -301,6 +319,33 @@
             <button id="complete" type="button">Mark as completed</button>
           </span>
         </div>
+      </section>
+
+      <!-- bottom nav -->
+      <section id="bottomNav_container">
+        <div class="bottomWrapper">
+          <a href="" class="bottomNav_link bottomNavActive">
+            <iconify-icon icon="akar-icons:home-alt1"></iconify-icon>
+            <span class="nav-item">Home</span>
+          </a>
+          <a href="" class="bottomNav_link">
+            <iconify-icon icon="solar:calendar-linear"></iconify-icon>
+            <span class="nav-item">Events</span>
+          </a>
+          <a href="" class="bottomNav_link">
+            <iconify-icon icon="solar:user-speak-rounded-linear"></iconify-icon>
+            <span class="nav-item">Speakers</span>
+          </a>
+          <a href="" class="bottomNav_link">
+            <iconify-icon icon="solar:document-linear"></iconify-icon>
+            <span class="nav-item">Reports</span>
+          </a>
+          <a href="" class="bottomNav_link">
+            <i class="bi bi-person-circle"></i>
+            <span class="nav-item">Profile</span>
+          </a>
+        </div>
+        <div id="bottom_block"></div>
       </section>
     </div>
     <script src="app.js"></script>
