@@ -395,6 +395,9 @@ body.dark {
   color: var(--general-background);
 }
 
+.main-content.dark .bottomWrapper {
+  background-color: #484554;
+}
 .main-content.dark .bottomNav_link {
   iconify-icon {
     font-size: 20px;
