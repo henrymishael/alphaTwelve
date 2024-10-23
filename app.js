@@ -227,7 +227,8 @@ let themeToggle = document.querySelector("#theme-toggle");
 let themeIcon = document.querySelector("#theme-icon");
 let themeMode = document.querySelector("#theme-mode");
 
-themeToggle.onclick = function () {
+// Function to toggle the theme
+function toggleTheme() {
   document.body.classList.toggle("dark");
   sidebar.classList.toggle("dark");
   mainContent.classList.toggle("dark");
@@ -235,7 +236,29 @@ themeToggle.onclick = function () {
   if (document.body.classList.contains("dark")) {
     themeIcon.classList.replace("bi-toggle-off", "bi-toggle-on");
     themeMode.innerHTML = "Light Mode";
+    localStorage.setItem("theme", "dark"); // Store the theme in localStorage
   } else {
+    themeIcon.classList.replace("bi-toggle-on", "bi-toggle-off");
+    themeMode.innerHTML = "Dark Mode";
+    localStorage.setItem("theme", "light"); // Store the theme in localStorage
+  }
+}
+
+themeToggle.onclick = toggleTheme;
+
+window.onload = function () {
+  const savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark");
+    sidebar.classList.add("dark");
+    mainContent.classList.add("dark");
+    themeIcon.classList.replace("bi-toggle-off", "bi-toggle-on");
+    themeMode.innerHTML = "Light Mode";
+  } else {
+    document.body.classList.remove("dark");
+    sidebar.classList.remove("dark");
+    mainContent.classList.remove("dark");
     themeIcon.classList.replace("bi-toggle-on", "bi-toggle-off");
     themeMode.innerHTML = "Dark Mode";
   }
@@ -459,25 +482,6 @@ function showModal(eventData, position) {
     "attendees"
   ).textContent = `${eventData.attendees} Attendees`;
 
-  //   const modalWidth = modal.offsetWidth;
-  //   const viewportWidth = window.innerWidth;
-  //   const viewportHeight = window.innerHeight; // Get the height of the viewport
-  //   let top = position.top + 250;
-  //   let left = position.left + window.scrollX + 56;
-
-  //   // Adjust the position based on screen size
-  //   if (viewportWidth <= 900) {
-  //     // For smaller screens (e.g., tablets and mobile)
-  //     top = position.top + 900; // Adjust the top offset for smaller screens
-  //     left = 20; // Position the modal towards the center horizontally
-  //   } else {
-  //     if (left + modalWidth > viewportWidth) {
-  //       left = viewportWidth - modalWidth; // Ensure modal doesn't overflow on the right
-  //     }
-  //   }
-
-  //   modal.style.top = `${top}px`;
-  //   modal.style.left = `${left}px`;
   modal.classList.add("show");
 }
 

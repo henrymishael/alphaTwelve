@@ -199,7 +199,8 @@ a {
   }
 
   i {
-    font-size: 28px;
+    font-size: 24px;
+    margin-left: -3px;
   }
 }
 
