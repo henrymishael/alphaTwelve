@@ -7,6 +7,9 @@
   --completed-color: #10b981;
   --in-progress-color: #3f8cff;
   --alert-color: #f43f5e;
+  --general-background: #ffffff;
+  --general-dark-background: #000000;
+  --border-color: #eee;
 }
 
 * {
@@ -16,7 +19,7 @@
   font-family: "Inter", sans-serif;
 }
 body {
-  background: white;
+  background: var(--general-background);
 }
 
 li {
@@ -36,8 +39,8 @@ a {
   width: 64px;
   padding: 16px;
   transition: all 0.5s ease;
-  background-color: white;
-  border-right: 0.1px solid #eee;
+  background-color: var(--general-background);
+  border-right: 0.1px solid var(--border-color);
   z-index: 10;
   overflow: hidden;
 
@@ -108,10 +111,8 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--general-background);
     border-radius: 100%;
-
-    /* margin-left: 28px; */
   }
 
   .red-small {
@@ -261,20 +262,20 @@ a {
 /* Dark theme */
 body.dark {
   background-color: #383544;
-  color: white;
+  color: var(--general-background);
 }
 .sidebar.dark {
   background-color: #484554;
-  color: white;
+  color: var(--general-background);
 }
 
 .sidebar.dark #close {
-  color: #fff;
+  color: var(--general-background);
 }
 
 .main-content.dark .card-top,
 .main-content.dark .card-bottom span:first-child {
-  color: white;
+  color: var(--general-background);
 }
 
 .main-content.dark .cards {
@@ -285,21 +286,21 @@ body.dark {
 .main-content.dark .chart-container {
   border: none;
   background-color: #484554;
-  color: #fff;
+  color: var(--general-background);
 }
 
 .main-content.dark #chart {
-  color: #fff;
+  color: var(--general-background);
 }
 
 .main-content.dark .apexcharts-xaxis text,
 .main-content.dark .apexcharts-yaxis text {
-  fill: white; /* Change labels color to white */
+  fill: var(--general-background);
 }
 
 .main-content.dark .apexcharts-tooltip {
   background: #11142d;
-  color: white;
+  color: var(--general-background);
 }
 
 .main-content.dark .right_content span,
@@ -309,17 +310,17 @@ body.dark {
 }
 
 .main-content.dark #cance {
-  color: #fff;
+  color: var(--general-background);
 }
 
 .main-content.dark td {
-  color: #fff;
+  color: var(--general-background);
   background-color: #484554;
 }
 
 .main-content.dark th {
   background-color: #6a6676;
-  color: #fff;
+  color: var(--general-background);
 }
 
 .main-content.dark .expanded {
@@ -329,14 +330,14 @@ body.dark {
 .main-content.dark .pagination button {
   background-color: #484554;
   border: none;
-  color: white;
+  color: var(--general-background);
 }
 
 .main-content.dark .pagination button:nth-child(2).active,
 .main-content.dark button:nth-child(3).active,
 .main-content.dark button:nth-child(4).active {
   background-color: #8576ff;
-  color: white;
+  color: var(--general-background);
 
   &:hover {
     background-color: #ccc;
@@ -349,7 +350,7 @@ body.dark {
 .main-content.dark .pagination-container select {
   background-color: #484548;
   border: none;
-  color: white;
+  color: var(--general-background);
 
   &:focus {
     border: none;
@@ -359,22 +360,22 @@ body.dark {
 .main-content.dark #modalEvent {
   background: #484554;
   box-shadow: 0px 16px 24px 0px rgba(0, 0, 0, 0.15);
-  color: white;
+  color: var(--general-background);
 }
 
 .main-content.dark .modal_details {
   h2 {
-    color: #fff;
+    color: var(--general-background);
   }
 
   p {
-    color: #fff;
+    color: var(--general-background);
   }
 }
 
 .main-content.dark .desc_container {
   #desc {
-    color: #fff;
+    color: var(--general-background);
   }
 }
 
@@ -384,18 +385,18 @@ body.dark {
 
 .main-content.dark .middle {
   .speaker_container {
-    color: #fff;
+    color: var(--general-background);
   }
 }
 
 .main-content.dark #search {
-  color: white;
+  color: var(--general-background);
 }
 
 .main-content.dark .bottomNav_link {
   iconify-icon {
     font-size: 20px;
-    color: #fff;
+    color: var(--general-background);
 
     &:hover {
       color: var(--primary-color);
@@ -404,7 +405,7 @@ body.dark {
 
   i {
     font-size: 20px;
-    color: #fff;
+    color: var(--general-background);
 
     &:hover {
       color: var(--primary-color);
@@ -437,17 +438,17 @@ body.dark {
 
 .sidebar.dark #active-nav {
   background: var(--primary-color);
-  color: white;
+  color: var(--general-background);
   border-radius: 8px;
 }
 .sidebar.dark li,
 .sidebar.dark .active li {
-  color: white;
+  color: var(--general-background);
 }
 
 .sidebar.dark li:hover {
   background-color: var(--primary-color);
-  color: white;
+  color: var(--general-background);
   border-radius: 8px;
 }
 
@@ -457,7 +458,6 @@ body.dark {
 
 /* main content */
 .main-content {
-  /* position: relative; */
   height: auto;
   top: 0;
   margin-left: 80px;
@@ -477,7 +477,6 @@ body.dark {
 }
 
 .card-wrapper {
-  /* display: flex; */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 12px;
@@ -541,8 +540,6 @@ body.dark {
   display: flex;
   justify-content: space-between;
   gap: 12px;
-  /* width: 100%; */
-  /* min-height: 100vh; */
 }
 
 .chart_carouselWrapper {
@@ -582,14 +579,14 @@ body.dark {
 
 .carousel-wrapper {
   display: flex;
-  transition: transform 0.5s ease-in-out; /* Smooth transition for sliding */
-  width: 300%; /* Adjust width to fit all slides */
-  position: relative; /* Position the slides properly */
+  transition: transform 0.5s ease-in-out;
+  width: 300%;
+  position: relative;
 }
 
 .carousel-slide {
-  width: 100%; /* Each slide takes up full width */
-  flex-shrink: 0; /* Prevent shrinking of slides */
+  width: 100%;
+  flex-shrink: 0;
   position: relative;
 }
 
@@ -597,13 +594,13 @@ body.dark {
   width: 100%;
   height: 100%;
   border-radius: 5px;
-  object-fit: cover; /* Ensure image fits within the container */
+  object-fit: cover;
 }
 
 .slide-text {
   position: absolute;
   bottom: 0;
-  color: white;
+  color: var(--general-background);
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -614,8 +611,8 @@ body.dark {
     180deg,
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0.5) 65%
-  ); /* Add background for better text readability */
-  width: 100%; /* Make text container fit full width of the slide */
+  );
+  width: 100%;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
@@ -633,27 +630,26 @@ body.dark {
   justify-content: space-between;
   width: 100%;
   padding: 0px 12px;
-  transform: translateY(-50%); /* Vertically center buttons */
+  transform: translateY(-50%);
 }
 
 .slide-buttons i {
-  background: #fff;
+  background: var(--general-background);
   padding: 6px;
   border-radius: 100%;
   font-size: 10px;
   height: 24px;
   width: 24px;
-  color: black;
-  cursor: pointer; /* Indicate buttons are clickable */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to buttons */
-  transition: background-color 0.3s ease; /* Add hover effect */
+  color: var(--general-dark-background);
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
 }
 
 .slide-buttons i:hover {
   background-color: #ddd;
 }
 
-/* Carousel Indicators */
 .carousel-indicators {
   position: absolute;
   bottom: 12px;
@@ -674,7 +670,7 @@ body.dark {
 }
 
 .indicator.active {
-  background-color: #fff;
+  background-color: var(--general-background);
 }
 
 .table_section {
@@ -713,7 +709,7 @@ body.dark {
   align-items: center;
   padding: 8px 16px;
   gap: 8px;
-  border: 1px solid #eee;
+  border: 1px solid var(--border-color);
   cursor: pointer;
 
   i {
@@ -733,7 +729,7 @@ body.dark {
     align-items: center;
     padding: 8px 16px;
     gap: 8px;
-    border: 1px solid #eee;
+    border: 1px solid var(--border-color);
     cursor: pointer;
   }
 }
@@ -804,7 +800,6 @@ td {
       width: 6px;
       height: 6px;
       border-radius: 100%;
-      /* background: #000; */
     }
   }
 }
@@ -849,33 +844,30 @@ tr {
 /* Modal container (hidden by default) */
 #filterModal {
   position: absolute;
-  top: 50%; /* Adjust this to the desired position */
+  top: 50%;
   left: 50%;
   transform: translateX(-50%);
-  display: none; /* Hidden by default */
-  width: 200px; /* Adjust width as needed */
-  background: #fff;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  display: none;
+  width: 200px;
+  background: var(--general-background);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
   z-index: 1000;
-  padding: 20px; /* Internal padding */
+  padding: 20px;
 }
 
-/* Modal content */
 .modal-content {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-/* Modal title */
 #modalTitle {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 8px;
 }
 
-/* Modal input */
 #modalInput {
   width: 100%;
   padding: 8px;
@@ -884,7 +876,6 @@ tr {
   border-radius: 4px;
 }
 
-/* Modal footer with buttons */
 .modal-footer {
   display: flex;
   justify-content: flex-end;
@@ -893,8 +884,8 @@ tr {
 
 .modal-footer button {
   padding: 8px 12px;
-  background-color: #8576ff; /* Blue background for buttons */
-  color: white;
+  background-color: #8576ff;
+  color: var(--general-background);
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -902,16 +893,15 @@ tr {
 }
 
 .modal-footer button:hover {
-  background-color: #a299ec; /* Darker blue on hover */
+  background-color: #a299ec;
 }
 
-/* Close button specific style */
 #closeFilter {
-  background: #f43f5e; /* Gray for close button */
+  background: #f43f5e;
 }
 
 #closeFilter:hover {
-  background-color: #5a6268; /* Darker gray on hover */
+  background-color: #5a6268;
 }
 
 .pagination-container {
@@ -942,14 +932,14 @@ tr {
 button:nth-child(3).active,
 button:nth-child(4).active {
   background-color: #8576ff;
-  color: white;
+  color: var(--general-background);
 
   &:hover {
     background-color: #ccc;
   }
 }
 .pagination button:not(.active) {
-  background-color: white;
+  background-color: var(--general-background);
 }
 
 .pagination button:first-child,
@@ -960,7 +950,7 @@ button:nth-child(4).active {
   border-radius: 2px;
   width: 36px;
   height: 36px;
-  background: white;
+  background: var(--general-background);
   border: 1px solid #e2e8f0;
 
   i {
@@ -1017,7 +1007,7 @@ button:nth-child(4).active {
   padding-top: 24px;
   width: 440px;
   height: 380px;
-  background: #fff;
+  background: var(--general-background);
   border-radius: 2px;
   z-index: 10;
   box-shadow: 0px 16px 24px 0px rgba(0, 0, 0, 0.15);
@@ -1040,13 +1030,13 @@ button:nth-child(4).active {
     color: #334155;
     font-size: 18px;
     font-weight: 600;
-    line-height: 28px; /* 155.556% */
+    line-height: 28px;
   }
 
   p {
     color: #64748b;
     font-size: 14px;
-    line-height: 20px; /* 142.857% */
+    line-height: 20px;
   }
 }
 
@@ -1055,7 +1045,7 @@ button:nth-child(4).active {
   #desc {
     color: #334155;
     font-size: 14px;
-    line-height: 20px; /* 142.857% */
+    line-height: 20px;
   }
 }
 
@@ -1068,7 +1058,7 @@ button:nth-child(4).active {
   .speaker_container {
     color: #334155;
     font-size: 14px;
-    line-height: 20px; /* 142.857% */
+    line-height: 20px;
   }
 }
 
@@ -1078,8 +1068,6 @@ button:nth-child(4).active {
 
 .avatar_container {
   display: flex;
-
-  /* align-items: center; */
 
   img {
     width: 32px;
@@ -1098,7 +1086,7 @@ button:nth-child(4).active {
 
 .button_holder {
   display: flex;
-  /* flex-grow: inherit; */
+
   align-items: center;
   justify-content: space-between;
   padding: 24px;
@@ -1121,17 +1109,17 @@ button:nth-child(4).active {
 
   #edit {
     border: 1px solid #e2e8f0;
-    background: #fff;
+    background: var(--general-background);
   }
 
   #delete {
     background: #f43f5e;
-    color: #fff;
+    color: var(--general-background);
   }
 
   #complete {
     background-color: #8576ff;
-    color: #fff;
+    color: var(--general-background);
   }
 }
 
@@ -1172,7 +1160,6 @@ button:nth-child(4).active {
     min-width: 100%;
     padding: 12px;
     border: 1px solid #f2f2f7;
-    /* height: 200px; */
   }
 
   .carousel-container {
@@ -1205,7 +1192,6 @@ button:nth-child(4).active {
   }
 
   #eventsTable_mini {
-    /* background: #000; */
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -1238,7 +1224,7 @@ button:nth-child(4).active {
   .rowww_container td {
     padding: 8px;
     padding-left: 36px;
-    /* background: #000; */
+
     width: 100%;
   }
 
@@ -1247,7 +1233,6 @@ button:nth-child(4).active {
   }
 
   .col_span {
-    /* background: #000; */
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -1270,7 +1255,6 @@ button:nth-child(4).active {
   td {
     font-size: 15px;
     color: #334155;
-    /* background: #000; */
 
     div {
       padding: 2px 4px;
@@ -1280,7 +1264,6 @@ button:nth-child(4).active {
       width: 74px;
       align-items: center;
       justify-content: center;
-      /* background: #000; */
 
       span:first-child {
         display: none;
@@ -1290,20 +1273,18 @@ button:nth-child(4).active {
 
   .status.completed {
     background-color: #10b981;
-    color: #fff;
+    color: var(--general-background);
   }
 
   .status.in-progress {
     background-color: #3b82f6;
-    color: #fff;
+    color: var(--general-background);
   }
 
-  /* Optional: Add some styles for the dropdown icon */
   .bi-chevron-down {
     cursor: pointer;
   }
 
-  /* When the icon is clicked, #inner will be shown */
   .open .hidden {
     display: block;
   }
@@ -1337,7 +1318,7 @@ button:nth-child(4).active {
     justify-content: center;
     padding: 8px 16px;
     gap: 8px;
-    border: 1px solid #eee;
+    border: 1px solid var(--border-color);
     cursor: pointer;
     width: 100%;
 
@@ -1386,7 +1367,7 @@ button:nth-child(4).active {
     padding-top: 24px;
     width: 335px;
     min-height: 380px;
-    background: #fff;
+    background: var(--general-background);
     border-radius: 2px;
     z-index: 10;
     box-shadow: 0px 16px 24px 0px rgba(0, 0, 0, 0.15);
@@ -1421,12 +1402,8 @@ button:nth-child(4).active {
     height: 100px;
   }
 
-  /* .card-top {
-    font-size: 12px;
-  } */
   .chart-container {
     width: 100%;
-    /* height: 150px; */
   }
 
   .carousel-container {
@@ -1451,7 +1428,6 @@ button:nth-child(4).active {
   }
 
   #eventsTable_mini {
-    /* background: #000; */
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -1459,7 +1435,7 @@ button:nth-child(4).active {
 
   #eventMini-row {
     cursor: pointer;
-    /* background: #000; */
+
     width: 100%;
   }
 
@@ -1478,7 +1454,7 @@ button:nth-child(4).active {
   .rowww_container td {
     padding: 8px;
     padding-left: 24px;
-    /* background: #000; */
+
     width: 100%;
   }
 
@@ -1487,7 +1463,6 @@ button:nth-child(4).active {
   }
 
   .col_span {
-    /* background: #000; */
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -1509,7 +1484,6 @@ button:nth-child(4).active {
   td {
     font-size: 15px;
     color: #334155;
-    /* background: #000; */
 
     div {
       padding: 2px 4px;
@@ -1519,7 +1493,6 @@ button:nth-child(4).active {
       width: 74px;
       align-items: center;
       justify-content: center;
-      /* background: #000; */
 
       span:first-child {
         display: none;
@@ -1529,20 +1502,18 @@ button:nth-child(4).active {
 
   .status.completed {
     background-color: #10b981;
-    color: #fff;
+    color: var(--general-background);
   }
 
   .status.in-progress {
     background-color: #3b82f6;
-    color: #fff;
+    color: var(--general-background);
   }
 
-  /* Optional: Add some styles for the dropdown icon */
   .bi-chevron-down {
     cursor: pointer;
   }
 
-  /* When the icon is clicked, #inner will be shown */
   .open .hidden {
     display: block;
   }
@@ -1576,7 +1547,7 @@ button:nth-child(4).active {
     justify-content: center;
     padding: 8px 16px;
     gap: 8px;
-    border: 1px solid #eee;
+    border: 1px solid var(--border-color);
     cursor: pointer;
     width: 100%;
 
@@ -1616,7 +1587,7 @@ button:nth-child(4).active {
     padding-top: 24px;
     width: 335px;
     min-height: 380px;
-    background: #fff;
+    background: var(--general-background);
     border-radius: 2px;
     z-index: 10;
     box-shadow: 0px 16px 24px 0px rgba(0, 0, 0, 0.15);
@@ -1656,7 +1627,7 @@ button:nth-child(4).active {
   }
 
   .sidebar.active ~ .main-content {
-    margin-left: 0px; /* Offset content by the expanded sidebar */
+    margin-left: 0px;
     width: 100%;
   }
 
@@ -1733,7 +1704,6 @@ button:nth-child(4).active {
 
   .card-wrapper {
     flex-wrap: wrap;
-    /* justify-content: center; */
   }
 
   .cards {
@@ -1758,7 +1728,7 @@ button:nth-child(4).active {
 
   .logo_wrapper {
     padding: 16px 0px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--border-color);
   }
 
   .table_container {
@@ -1775,7 +1745,6 @@ button:nth-child(4).active {
   }
 
   #eventsTable_mini {
-    /* background: #000; */
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -1783,7 +1752,7 @@ button:nth-child(4).active {
 
   #eventMini-row {
     cursor: pointer;
-    /* background: #000; */
+
     width: 100%;
     th:first-child {
       width: 70%;
@@ -1835,7 +1804,6 @@ button:nth-child(4).active {
   td {
     font-size: 15px;
     color: #334155;
-    /* background: #000; */
 
     div {
       padding: 2px 4px;
@@ -1845,7 +1813,6 @@ button:nth-child(4).active {
       width: 74px;
       align-items: center;
       justify-content: center;
-      /* background: #000; */
 
       span:first-child {
         display: none;
@@ -1855,20 +1822,18 @@ button:nth-child(4).active {
 
   .status.completed {
     background-color: #10b981;
-    color: #fff;
+    color: var(--general-background);
   }
 
   .status.in-progress {
     background-color: #3b82f6;
-    color: #fff;
+    color: var(--general-background);
   }
 
-  /* Optional: Add some styles for the dropdown icon */
   .bi-chevron-down {
     cursor: pointer;
   }
 
-  /* When the icon is clicked, #inner will be shown */
   .open .hidden {
     display: block;
   }
@@ -1902,7 +1867,7 @@ button:nth-child(4).active {
     justify-content: center;
     padding: 8px 16px;
     gap: 8px;
-    border: 1px solid #eee;
+    border: 1px solid var(--border-color);
     cursor: pointer;
     width: 100%;
 
@@ -1952,7 +1917,7 @@ button:nth-child(4).active {
     padding-top: 24px;
     width: 335px;
     min-height: 380px;
-    background: #fff;
+    background: var(--general-background);
     border-radius: 2px;
     z-index: 10;
     box-shadow: 0px 16px 24px 0px rgba(0, 0, 0, 0.15);
@@ -1978,9 +1943,6 @@ button:nth-child(4).active {
   }
   #bottomNav_container {
     display: flex;
-    /* margin: 40px 0px; */
-    /* align-items: center; */
-    /* position: relative; */
   }
 
   .bottomWrapper {
@@ -1991,7 +1953,7 @@ button:nth-child(4).active {
     position: sticky;
     bottom: 0px;
     width: 100%;
-    /* background: #10b981; */
+
     z-index: 40;
   }
 
@@ -2032,7 +1994,6 @@ button:nth-child(4).active {
   td {
     font-size: 12px;
     color: #334155;
-    /* background: #000; */
   }
 
   #eventMini-row {
@@ -2064,7 +2025,7 @@ button:nth-child(4).active {
     padding-top: 24px;
     width: 300px;
     min-height: 380px;
-    background: #fff;
+    background: var(--general-background);
     border-radius: 2px;
     z-index: 10;
     box-shadow: 0px 16px 24px 0px rgba(0, 0, 0, 0.15);

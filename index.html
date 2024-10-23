@@ -4,19 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Event Management Dashboard</title>
+    <!-- favicon link -->
     <link
       rel="shortcut icon"
       href="images/assets/Logo.png"
       type="image/x-icon"
     />
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- cdn links -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
-
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js"
       integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw=="
@@ -30,15 +32,13 @@
       <div class="logo_wrapper">
         <div id="logo"></div>
         <div class="logo2">Full Logo</div>
-        <!-- <i id="close" class="bi bi-x-lg"></i> -->
-        <!-- <img id="close" src="images/assets/close.png" alt="" /> -->
+
         <iconify-icon id="close" icon="solar:close-circle-bold"></iconify-icon>
       </div>
 
       <ul class="nav-lists1">
         <li id="active-nav">
           <a href="">
-            <!-- <i class="bi bi-house"></i> -->
             <iconify-icon icon="akar-icons:home-alt1"></iconify-icon>
             <span class="nav-item">Home</span>
           </a>
@@ -113,7 +113,6 @@
             id="open"
             icon="solar:hamburger-menu-broken"
           ></iconify-icon>
-          <!-- <img  src="images/assets/menu.png" alt="" /> -->
         </span>
       </div>
 
@@ -128,7 +127,6 @@
         <!-- chart -->
         <div class="chart_carouselContainer">
           <div class="chart-container">
-            <!-- <canvas id="myChart"></canvas> -->
             <div id="chart"></div>
           </div>
           <div class="carousel-container">
@@ -214,6 +212,7 @@
               </span>
             </div>
             <h5 id="table_length">Displaying 100 results</h5>
+
             <!-- Filter Modal -->
             <div id="filterModal" class="filter-modal">
               <div class="modal-content">
@@ -241,6 +240,7 @@
           </div>
         </div>
 
+        <!-- table layout -->
         <table id="eventsTable">
           <thead>
             <tr>
@@ -260,8 +260,6 @@
             <tr id="eventMini-row">
               <th>Event Name</th>
               <th>Status</th>
-              <!-- <th></th>
-              <th></th> -->
             </tr>
           </thead>
           <tbody id="miniTableBody">
@@ -291,7 +289,6 @@
             <p id="event_date"></p>
           </span>
           <span>
-            <!-- <img  src="images/assets/close.png" alt="" /> -->
             <iconify-icon
               id="cance"
               icon="solar:close-circle-bold"

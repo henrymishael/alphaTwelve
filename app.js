@@ -505,6 +505,7 @@ document
   .getElementById("status")
   .addEventListener("click", () => showFilterModal("status"));
 let cancel = document.getElementById("cance");
+
 // Function to render the table
 function renderTable(data, page) {
   const tableBody = document.querySelector("#eventsTable tbody");
@@ -608,7 +609,7 @@ function renderMiniTable(data, page) {
       if (innerDiv.classList.contains("hidden_2")) {
         innerDiv.classList.remove("hidden_2"); // Show the content
         row.classList.add("expanded");
-        // row.addEventListener("click", showModal);
+        row.addEventListener("click", showModal);
         detailsRow.classList.add("expanded");
 
         chevronIcon.classList.remove("bi-chevron-right"); // Change to chevron-down
@@ -616,7 +617,7 @@ function renderMiniTable(data, page) {
       } else {
         innerDiv.classList.add("hidden_2"); // Hide the content
         row.classList.remove("expanded");
-        // row.addEventListener("click", null);
+        row.removeEventListener("click", showModal);
         chevronIcon.classList.remove("bi-chevron-down"); // Change back to chevron-right
         chevronIcon.classList.add("bi-chevron-right");
       }
